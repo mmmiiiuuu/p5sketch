@@ -25,7 +25,7 @@ function preload() {
 }
 
 function setup() {
-  createCanvas(400, 400);
+  createCanvas(1200, 1200);
 
   // Create and label the tiles
   tiles[0] = new Tile(tileImages[0], ["AAA", "AAA", "AAA", "AAA"]);
