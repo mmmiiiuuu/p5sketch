@@ -96,7 +96,6 @@ function draw() {
         image(tiles[index].img, i * w, j * h, w, h);
       } else {
         fill(0);
-        stroke(100);
         rect(i * w, j * h, w, h);
       }
     }
