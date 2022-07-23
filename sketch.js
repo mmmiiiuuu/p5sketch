@@ -95,7 +95,7 @@ function draw() {
         let index = cell.options[0];
         image(tiles[index].img, i * w, j * h, w, h);
       } else {
-        fill(0);
+        fill(234);
         rect(i * w, j * h, w, h);
       }
     }
