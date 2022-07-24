@@ -14,19 +14,23 @@ const tileImages = [];
 let grid = [];
 
 // Width and height of each cell
-const DIM = 25;
+const DIM = 50;
+
+
 
 // Load images
 function preload() {
-  const path = "circuit1";
+  const path = "bw";
   for (let i = 0; i < 13; i++) {
     tileImages[i] = loadImage(`${path}/${i}.png`);
   }
 }
 
 function setup() {
-  createCanvas(1200, 1200);
-
+  createCanvas(1200,1200);
+  console.log(randomSeed);
+  
+  
   // Create and label the tiles
   tiles[0] = new Tile(tileImages[0], ["AAA", "AAA", "AAA", "AAA"]);
   tiles[1] = new Tile(tileImages[1], ["BBB", "BBB", "BBB", "BBB"]);
@@ -42,6 +46,7 @@ function setup() {
   tiles[11] = new Tile(tileImages[11], ["BCB", "BCB", "BBB", "BBB"]);
   tiles[12] = new Tile(tileImages[12], ["BBB", "BCB", "BBB", "BCB"]);
 
+    
   // Rotate tiles
   // TODO: eliminate redundancy
   for (let i = 2; i < 14; i++) {
@@ -82,12 +87,16 @@ function checkValid(arr, valid) {
 }
 
 
+
 function draw() {
-  background(0);
+  background(1,0,0, 2);
+
   
+let o = (3*frameCount/89^89); 
   // Draw the grid
-  const w = width / DIM;
-  const h = height / DIM;
+
+  const w = width*0.6180339887/ DIM *1.6180339887;
+  const h = height*0.6180339887 / DIM*1.6180339887;
   for (let j = 0; j < DIM; j++) {
     for (let i = 0; i < DIM; i++) {
       let cell = grid[i + j * DIM];
@@ -95,9 +104,33 @@ function draw() {
         let index = cell.options[0];
         image(tiles[index].img, i * w, j * h, w, h);
       } else {
-        fill(234);
-        stroke(234);
-        rect(i * w, j * h, w, h);
+        fill(237);
+        stroke(230);
+        circle(i * w/2*frameCount, j * h/2, w/2, h/2);
+        rotate(o)
+        rotate(o*0.01)
+        rotate(o*0.02)
+        rotate(o*0.03)
+        rotate(o*0.05)
+        rotate(o*0.08)
+        rotate(o*0.13)
+        rotate(o*0.21)
+        rotate(o*0.34)
+        rotate(o*0.55)
+        rotate(o*0.89)
+        rotate(o*0.6180339887)
+           rotate(o*1.6180339887)
+        rotate(o/2*0.6180339887)
+                rotate(o/3*0.6180339887)
+                rotate(o/5*0.6180339887)
+                rotate(o/8*0.6180339887)
+                rotate(o/13*0.6180339887)
+                        rotate(o/21*0.6180339887)
+                        rotate(o/34*0.6180339887)
+                        rotate(o/55*0.6180339887)
+                        rotate(o/89*0.6180339887)
+          rotate(o/144*0.6180339887)
+             rotate(o/233*0.6180339887)
       }
     }
   }
@@ -196,7 +229,12 @@ function draw() {
         nextGrid[index] = new Cell(options);
       }
     }
+  
   }
 
   grid = nextGrid;
+  
+}
+function mousePressed(){
+  loop();
 }
