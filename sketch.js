@@ -18,7 +18,7 @@ const DIM = 25;
 
 // Load images
 function preload() {
-  const path = "1";
+  const path = "";
   for (let i = 0; i < 13; i++) {
     tileImages[i] = loadImage(`${path}/${i}/${i}.png`);
   }
