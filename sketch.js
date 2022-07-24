@@ -20,7 +20,7 @@ const DIM = 25;
 function preload() {
   const path = "1";
   for (let i = 0; i < 13; i++) {
-    tileImages[i] = loadImage(`${path}/${i}.png`);
+    tileImages[i] = loadImage(`${path}/${i}/${i}.png`);
   }
 }
 
