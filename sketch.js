@@ -27,7 +27,7 @@ function preload() {
 }
 
 function setup() {
-  createCanvas(1200,1200);
+  createCanvas(windowWidth,windowHeight);
   console.log(randomSeed);
   
   
