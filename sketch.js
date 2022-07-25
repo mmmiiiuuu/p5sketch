@@ -20,8 +20,8 @@ const DIM = 50;
 
 // Load images
 function preload() {
-  const path = "digits";
-  for (let i = 0; i < 10; i++) {
+  const path = "circuit1";
+  for (let i = 0; i < 13; i++) {
     tileImages[i] = loadImage(`${path}/${i}.png`);
   }
 }
