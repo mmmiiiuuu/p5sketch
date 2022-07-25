@@ -20,8 +20,8 @@ const DIM = 50;
 
 // Load images
 function preload() {
-  const path = "circuit1";
-  for (let i = 0; i < 13; i++) {
+  const path = "digits";
+  for (let i = 0; i < 10; i++) {
     tileImages[i] = loadImage(`${path}/${i}.png`);
   }
 }
@@ -42,9 +42,9 @@ function setup() {
   tiles[7] = new Tile(tileImages[7], ["BDB", "BCB", "BDB", "BCB"]);
   tiles[8] = new Tile(tileImages[8], ["BDB", "BBB", "BCB", "BBB"]);
   tiles[9] = new Tile(tileImages[9], ["BCB", "BCB", "BBB", "BCB"]);
-  tiles[10] = new Tile(tileImages[10], ["BCB", "BCB", "BCB", "BCB"]);
-  tiles[11] = new Tile(tileImages[11], ["BCB", "BCB", "BBB", "BBB"]);
-  tiles[12] = new Tile(tileImages[12], ["BBB", "BCB", "BBB", "BCB"]);
+  //tiles[10] = new Tile(tileImages[10], ["BCB", "BCB", "BCB", "BCB"]);
+  //tiles[11] = new Tile(tileImages[11], ["BCB", "BCB", "BBB", "BBB"]);
+  //tiles[12] = new Tile(tileImages[12], ["BBB", "BCB", "BBB", "BCB"]);
 
     
   // Rotate tiles
